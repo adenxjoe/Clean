@@ -29,7 +29,8 @@
 # org.droidtv.GlobalKey, org.droidtv.playtv, org.droidtv.xtv, com.mediatek.tvinput,
 # com.mediatek.tunerservice, org.droidtv.tvsystemui or org.droidtv.settings.
 # The newer Philips list identifies org.droidtv.candeebug + org.droidtv.gel as the DAC analytics
-# pair; both exist here but remain enabled until they have been exercised on this older firmware.
+# pair; they are disabled below together with the framework logger, Inscape ACR and Google partner
+# setup, after tools/privacy.py named them on this TV.
 
 # Google feedback and first-run tutorial
 com.google.android.feedback                       # Market Feedback Agent
@@ -45,3 +46,10 @@ org.droidtv.usagelogger                           # Philips usage and device log
 com.google.android.tvlauncher
 com.google.android.tvrecommendations              # Android TV recommendations/content rows
 com.google.android.leanbacklauncher.recommendations
+
+# ACR and analytics named by tools/privacy.py (no microphone use; none is a TV or input service)
+tv.inscape.tvclient.inscapeacr                    # Inscape ACR: identifies what is on screen, HDMI included
+org.droidtv.candeebug                             # "DAC" analytics (runs together with org.droidtv.gel)
+org.droidtv.gel                                   # "GEL" analytics
+org.droidtv.tv.frameworklogger                    # Framework and reboot logging
+com.google.android.partnersetup                   # Google Partner Setup: RLZ attribution pings
