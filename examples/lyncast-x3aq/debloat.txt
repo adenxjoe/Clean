@@ -1,0 +1,27 @@
+# LYNCAST X3AQ / Allwinner H726 (LuminaOS): ro.product.model="rk3562_projector",
+# board sun50iw15p1 (H726 Focus), Android 14 (API 34).
+#
+# Apply:   TV_HOST=<tv ip> tools/disable.sh examples/lyncast-x3aq/debloat.txt
+# Undo:    TV_HOST=<tv ip> tools/restore.sh examples/lyncast-x3aq/debloat.txt com.htc.luminaos
+#
+# WARNING: Do NOT disable com.htc.luminaos completely! It hosts the projector's keystone correction
+# receivers and remote pairings. CleanYourTV becomes Home via set-home-activity without disabling LuminaOS.
+#
+# Telemetry, stock bloat and unneeded services:
+com.google.android.youtube.tv
+com.android.ytb
+com.android.nfx
+com.android.music
+com.softwinner.TvdVideo
+com.softwinner.awlogsettings
+com.htc.hyk_test
+com.htc.screensaver
+com.hotack.screensaversdk
+com.google.android.katniss
+com.android.bips
+com.android.companiondevicemanager
+com.android.dreams.basic
+com.android.traceur
+com.android.htmlviewer
+com.toofifi.lineserver
+com.mphotool.usbcastserver

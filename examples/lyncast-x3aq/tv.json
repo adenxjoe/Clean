@@ -1,0 +1,6 @@
+{
+  "tv": "LYNCAST X3AQ (H726 Focus)",
+  "os": "Android TV 14",
+  "brand": "LYNCAST",
+  "notes": "LuminaOS, Allwinner H726, vendor ADB sabotage bypass: [notes](../docs/devices/lyncast-x3aq-allwinner-h726.md)"
+}
