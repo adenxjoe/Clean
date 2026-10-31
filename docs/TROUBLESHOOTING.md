@@ -282,6 +282,10 @@ Things that bit us or contributors, so they don't bite you. Commands use `tools/
 - **A reboot on setupwraith's recovery screen factory-reset the TV** (Xiaomi MiTV-MOSR4). Disable
   setupwraith before launcherx. If `mFocusedApp` shows `.RecoveryActivity`, re-enable launcherx
   first and do not reboot. [Notes](devices/xiaomi-mitv-mosr4.md).
+- **Home worked for days, then went black after a power cut** (Acer R4G and Panasonic 4KTV-3MUP,
+  MOKA `R4_GTV`, Google TV 14): the firmware re-enables setupwraith at every cold boot and its
+  `.RecoveryActivity` takes Home. `logcat | grep RecoveryActivity` shows it starting several times a
+  second. Re-enable launcherx as above. [Notes](devices/acer-r4g.md).
 - **Black screen at every boot after the launcher change, LED on, remote dead** (Vision
   2024VISION43STV, CVTE, Android 13: [its list](../examples/vision-2024vision43stv/debloat.txt) has the
   details). With file-based encryption (`getprop ro.crypto.type` says `file`) Android starts Home before
